@@ -1,0 +1,41 @@
+html,
+body {
+  font-family: Arial, sans-serif;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  height: 100%;
+  position: relative;
+}
+
+#map {
+  height: 100%;
+  left: 1em;
+  position: relative;
+}
+
+#search {
+  background-position: 10px 12px;
+  background-repeat: no-repeat;
+  width: 90%;
+  font-size: 16px;
+  padding: 10px 5px 10px 5px;
+  border: 1px solid #ddd;
+  margin-left: 12px;
+}
+
+ul {
+    display: block;  /* Remove bullet points; allow greater control of positioning */
+    padding: 0;      /* Override defaults for lists */
+    margin: 0;       /* Override defaults for lists */
+    width: 100%;     /* Get the row full width */
+}
+
+li {
+  display: inline-block; /* Get all images to show in a row */
+  width: 100%;            /* Show 4 logos per row */
+  text-align: center;    /* Centre align the images */
+}

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  </head>
+  <body>
+    <div class="container">
+      <div class="w3-sidebar w3-light-grey w3-bar-block">
+      <h3 class="w3-bar-item" id="t" data-bind="text: title" ></h3>
+      <input id="search" type="search" data-bind="value: query, valueUpdate: 'keyup'" autocomplete="off">
+      <div id="search_bar">
+        <ul data-bind="template: {name:'location', foreach:locations}">
+        </ul>
+      </div>
+    </div>
+      <div id="map"></div>
+    </div>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/knockout.js"></script>
+    <script type="text/html" id="location">
+      <li>
+        <a href='#' data-bind='text: title, click:$parent.show_infowindow' class='w3-bar-item'></a>
+      </li>
+    </script>
+    <script src="js/script.js"></script>
+    <script async defer
+        src="https://maps.googleapis.com/maps/api/js?libraries=places&key=AIzaSyCbmM7khc_1HMuw-M_jtuyIdxnxPIrzwe0&v=3&callback=initMap" onerror="googleError()">
+    </script>
+  </body>
+</html>
